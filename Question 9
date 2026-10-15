@@ -1,0 +1,27 @@
+
+class Hospital {
+    // Public members can be accessed from other classes.
+    public String hospitalName;
+    public String hospitalCode;
+
+    public Hospital() {
+        hospitalName = "City Hospital";
+        hospitalCode = "H101";
+    }
+
+    public void displayHospital() {
+        System.out.println("Hospital: " + hospitalName);
+        System.out.println("Code: " + hospitalCode);
+    }
+}
+
+public class PublicAccessMain {
+    public static void main(String[] args) {
+        Hospital h = new Hospital();
+
+        h.hospitalName = "Health Care Hospital";
+        h.hospitalCode = "H202";
+
+        h.displayHospital();
+    }
+}
