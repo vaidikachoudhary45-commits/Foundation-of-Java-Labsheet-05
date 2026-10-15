@@ -1,0 +1,42 @@
+
+class Employee {
+    protected int employeeId;
+    protected String employeeName;
+    protected double salary;
+
+    Employee(int employeeId, String employeeName, double salary) {
+        this.employeeId = employeeId;
+        this.employeeName = employeeName;
+        this.salary = salary;
+    }
+
+    void displayEmployee() {
+        System.out.println("ID: " + employeeId);
+        System.out.println("Name: " + employeeName);
+        System.out.println("Salary: " + salary);
+    }
+}
+
+// Pharmacist is the child class of Employee.
+class Pharmacist extends Employee {
+    private String licenseNo;
+
+    Pharmacist(int employeeId, String employeeName,
+               double salary, String licenseNo) {
+        super(employeeId, employeeName, salary);
+        this.licenseNo = licenseNo;
+    }
+
+    void displayPharmacist() {
+        displayEmployee();
+        System.out.println("License: " + licenseNo);
+    }
+}
+
+public class SingleInheritanceMain {
+    public static void main(String[] args) {
+        Pharmacist p =
+            new Pharmacist(101, "Riya", 30000, "LIC101");
+        p.displayPharmacist();
+    }
+}
