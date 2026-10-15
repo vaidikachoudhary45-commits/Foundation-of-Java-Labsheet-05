@@ -1,0 +1,28 @@
+
+public class InheritanceConceptMain {
+    public static void main(String[] args) {
+        System.out.println("Multiple and Hybrid Inheritance");
+        System.out.println("Java does not support multiple inheritance");
+        System.out.println("of classes directly.");
+        System.out.println("Interfaces can support multiple");
+        System.out.println("inheritance of type.");
+    }
+}
+
+/*
+Multiple inheritance means a class inherits from
+more than one parent class.
+
+Java does not allow:
+class C extends A, B
+
+This avoids ambiguity when both parent classes
+contain the same method.
+
+Hybrid inheritance combines two or more forms
+of inheritance.
+
+Interfaces are commonly used when Java needs
+multiple or hybrid inheritance of type/behavior.
+No interface is implemented in this program.
+*/
